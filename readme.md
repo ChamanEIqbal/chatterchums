@@ -1,15 +1,12 @@
 Documentation & Acknowledgements
 ================================
 
-Social Media Application in C++, using wxWidgets & sqlite3 database, is a project that was submitted to Ms. Rabia Amjad for the CCA (Complex Computing Activity) of our Data Structures and Algorithms course (CSL-221).
+Social Media Application in C++, using wxWidgets & sqlite3 database, is a project that was submitted to [redacted] for the CCA (Complex Computing Activity) of our Data Structures and Algorithms course (CSL-221).
 
 Authors:
 --------
 
-* Mustafa Ahmed Khan **(02-134222-022)**
-* Muhammad Umar Amir **(02-134222-013)**
-
-FALL-2023 (BSCS III-B)
+* Mustafa Ahmed Khan *
 
   
 
