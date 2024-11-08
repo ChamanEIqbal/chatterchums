@@ -1,15 +1,12 @@
 Documentation & Acknowledgements
 ================================
 
-Social Media Application in C++, using wxWidgets & sqlite3 database, is a project that was submitted to Ms. Rabia Amjad for the CCA (Complex Computing Activity) of our Data Structures and Algorithms course (CSL-221).
+Social Media Application in C++, using wxWidgets & sqlite3 database, is a project that was submitted to [redacted] for the CCA (Complex Computing Activity) of our Data Structures and Algorithms course (CSL-221).
 
 Authors:
 --------
 
-* Mustafa Ahmed Khan **(02-134222-022)**
-* Muhammad Umar Amir **(02-134222-013)**
-
-FALL-2023 (BSCS III-B)
+* Mustafa Ahmed Khan
 
   
 
@@ -49,8 +46,8 @@ Modules
 
 Explanation of Graph Implementation:
 ====================================
-
-       #ifndef MAIN_H
+```cpp
+    #ifndef MAIN_H
     #define MAIN_H
     
     #include <wx/wx.h>
@@ -70,36 +67,37 @@ Explanation of Graph Implementation:
        static Graph App_Graph;
     };
     #endif
-    
+ ```
     
 
 MyApp Class _(../include/main.h)_, has an instantiation of Graph.h, as a singleton instance, which can be called anywhere. when the **GetGraph()** function is called, it initalizes the value of the _unordered_map_ instance of the Graph's class from the database, and sets its values from the FRIENDS table (../resources/database.db).
 
 It is called in the Dashboard's Implementation as follows:
-
+```cpp
     /*ADD FRIENDS PANEL*/
     Graph graph = MyApp::GetGraph();
     FriendsPanel *add_friends_panel = new FriendsPanel(notebook, user, graph);
     notebook->AddPage(add_friends_panel, wxString::Format("Friends"));
     /*Add FRIENDS PANEL END */
-    
+```
 
 LINE NO. 45 ONWARDS _(../include/frames/Dashboard.h)_
 
 The graph is then given to the FriendsPanel's constructor for further implementation.
 
+```cpp
     vector<string> recommended = dao_user.getUsernamesFromIds(Graph.dfsRecommendation(user_.id, 15));
     
     for (int i = 0; i < recommended.size(); ++i) {  
     wxPanel* squarePanel = CreateSquarePanel(scrolledWindow2, recommended[i]);
     scrolledBoxSizer2->Add(squarePanel, 0, wxALL, 10);
     }
-    
+```
 
 We can change the .dfsRecommendation() to .bfsRecommendation, though done manually; it would have been better if we were to add an option.
 
 The DAO_USER instance uses a function as follows, which allows the vector of integers to be correlated one by one to each ID of the user in the USERS table, and return an array of strings containing its corresponding username.
-
+```cpp
     std::vector<std::string> getUsernamesFromIds(std::vector<int> userIDs) {
     std::vector<std::string> usernames;
     
@@ -148,7 +146,7 @@ The DAO_USER instance uses a function as follows, which allows the vector of int
     
     return usernames;
     }
-    
+```  
 
 Acknowledgements
 ================
@@ -158,3 +156,4 @@ We acknowledge our teachers, for they have given us an opportunity and entrusted
 We would also like to give courtesy to [Yanson Tech](https://youtu.be/tHMGA0jIl3Y?si=SAqZZxF3-pNXq1JR), as they introduced us to the concepts of makefiles, external libraries and how headerfiles are created and used in Visual Studio Code.
 
 * * *
+
