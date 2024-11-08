@@ -6,7 +6,7 @@ Social Media Application in C++, using wxWidgets & sqlite3 database, is a projec
 Authors:
 --------
 
-* Mustafa Ahmed Khan *
+* Mustafa Ahmed Khan
 
   
 
