@@ -8,7 +8,7 @@ how to run:
 * open project in vscode
 * run build tasks
 
-
+_tasks.json:_
 ```json
 {
     "version": "2.0.0",
