@@ -1,4 +1,4 @@
-Documentation & Acknowledgements
+DOCUMENTATION & ACKNOWLEDGEMENTS
 ================================
 
 Social Media Application in C++, using wxWidgets & sqlite3 database, is a project that was submitted to [redacted] for the CCA (Complex Computing Activity) of our Data Structures and Algorithms course (CSL-221).
@@ -10,7 +10,7 @@ Authors:
 
   
 
-Modules
+COMPONENTS & FEATURES
 =======
 
 * GUI
@@ -22,12 +22,15 @@ Modules
         * **View Posts** _(../include/componentsAllPostsPane.h)_
         * **Friend Recommendation** _(../include/components/FriendsPanel.h)_
         * **User Profile** _(../components/ProfilePanel.h)_
-* Frames
+* Features
     ------
     
-    * **Login Frame** _(../src/LoginFrame.cpp & ../include/frames/LoginFrame.h)_
-    * **Register Frame** _(../src/RegFrame.cpp & ../include/frames/RegFrame.h)_
-    * **Startup Frame** _(../src/StartupFrame.cpp & ../include/frames/StartupFrame.h)_
+    * **Login** Users can log into their accounts.
+    * **Register** If any User doesn't have an account on the application, the user can register for a new one.
+    * **Add Post** Logged in users are directed to a dashboard, where they can add posts.
+    * **View Posts** Logged in users can view other people's posts.
+    * **Check Recommended Friends** In their "Add friends" tab on the dashboard, logged in users are recommended friends using Graph data structure.
+    * **Change User Settings** Logged in users can change their passwords / usernames.
 * Database (Data Access Objects)
     ------------------------------
     
